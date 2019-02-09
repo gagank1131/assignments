@@ -54,9 +54,10 @@ ul li a{
 
 .content{
 height: 900px;
-
+width: 1075px;
 background: white;
 padding: 30px;
+margin: 0 auto;
 }
 
 .content1{
@@ -66,16 +67,11 @@ width: 1000px;
 margin: 0 auto;
 background: black;
 text-align: center;
+vertical-align: middle;
+color: white;
 
 }
-.content1_text{
 
-}
-.content1_text p{
-  text-align: center;
-  color: white;
-
-}
 .content2{
   background: #EDEDED;
   width: 1000px;
@@ -128,7 +124,7 @@ caption{
 }
 
 .footer{
-  width: 1000px;
+  width: 1140px;
   height: 70px;
 margin: 0 auto;
 }
