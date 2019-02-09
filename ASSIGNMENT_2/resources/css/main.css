@@ -1,0 +1,137 @@
+body{
+  background: white;
+  padding: 5px;
+}
+h2{
+  color: #24a6a6;
+}
+
+.container{
+  width: 1000px;
+  margin: 0 auto;
+
+}
+.header{
+height: 70px;
+
+}
+ul li {
+float: left;
+list-style-type: none;
+padding-right: 5px;
+
+}
+ul li a{
+  text-decoration: none;
+  color: #24a6a6
+
+
+}
+
+
+.head_left{
+
+  float: left;
+}
+.head_right{
+
+  float: right;
+  margin-top: 11px;
+}
+
+.form_content{
+
+  width: 500px;
+  height: 722px;
+  margin: 30px auto;
+  border: 3px solid #bac0ca;
+  border-radius: 10px;
+}
+
+
+.form_content hr {
+  padding: 0px;
+  margin: 0px;
+  width: 500px;
+}
+
+.form_header{
+  height: 60px;
+  background: #bac0ca;
+  border: 1px solid #bac0ca;
+}
+
+.form_header h3 {
+  color: white;
+  font-weight: 800;
+  text-align: left;
+  margin: 20px;
+  font-family: cursive;
+}
+.text_fields{
+  width: 450px;
+  height: 700px;
+  margin:  0 auto;
+  margin-top: 3px;
+  margin-left: 0px;
+}
+p{
+  color: grey;
+  margin: 4px;
+
+  margin-left: 30px;
+}
+form{
+  padding: 5px;
+}
+
+.box{
+  margin: 1px;
+  border-radius: 5px;
+  border: 2px solid #bac0ca;
+  margin-bottom: 15px;
+
+  margin-left: 30px;
+}
+
+form select{
+  background: #24a6a6;
+color: white;
+font-weight: bold;
+}
+
+.drop_down{
+  width: 430px;
+  padding: 4px;
+  border-radius: 5px;
+  border: 2px solid #bac0ca;
+  margin-bottom: 15px;
+
+  margin-left: 30px;
+}
+
+#Version{
+  padding: 10px;
+}
+
+
+.submission{
+  height: 60px;
+  background: #bac0ca;
+  width: 500px;
+  border: 1px solid #bac0ca;
+  margin-top: -1px;
+
+}
+
+.submission input{
+ float: right;
+ margin: 20px 20px;
+ background: #0c50fc;
+ color: white;
+
+}
+
+#free{
+  margin-left: 30px;
+}
