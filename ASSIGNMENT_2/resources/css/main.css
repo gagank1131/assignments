@@ -42,7 +42,7 @@ ul li a{
 .form_content{
 
   width: 500px;
-  height: 722px;
+  height: 785px;
   margin: 30px auto;
   border: 3px solid #bac0ca;
   border-radius: 10px;
@@ -92,6 +92,7 @@ form{
   margin-bottom: 15px;
 
   margin-left: 30px;
+
 }
 
 form select{
@@ -122,16 +123,29 @@ font-weight: bold;
   border: 1px solid #bac0ca;
   margin-top: -1px;
 
+
 }
 
 .submission input{
  float: right;
  margin: 20px 20px;
- background: #0c50fc;
+ background: seagreen;
  color: white;
+border-radius: 3px;
+
 
 }
 
 #free{
   margin-left: 30px;
+}
+
+.file1{
+  margin: 1px;
+  border-radius: 5px;
+  border: 2px solid #bac0ca;
+  margin-bottom: 15px;
+width: 430px;
+  margin-left: 30px;
+
 }
