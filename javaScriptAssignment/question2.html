@@ -1,0 +1,37 @@
+<html>
+<head>
+
+</head>
+<body>
+Enter the string:<input type="text" id="txtbox"/>
+<input type="button" onclick="user_enter()" value="Check"/>
+<p id="result"></p>
+<script>
+
+function user_enter()
+{
+
+var str = document.getElementById('txtbox').value;
+var result = checkPalindrome(str);
+document.getElementById("result").innerHTML=result;
+}
+
+function checkPalindrome(str)
+{
+var orignalStr;
+orignalStr = str;
+str = str.split('');
+str = str.reverse();
+str = str.join('');
+var reverseStr = str;
+
+
+if(orignalStr == reverseStr){
+return 'Palindrome';
+}else{
+return 'Not Palindrome';
+}
+}
+</script>
+</body>
+</html>

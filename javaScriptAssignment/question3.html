@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+Enter input:<input type="number" name="radius" id="radius" placeholder="Enter radius">
+<input type="button" onclick="calculate()" name="" value="calculate">
+<p id="final"></p>
+<script type="text/javascript">
+function Enter(){
+
+var value=document.getElementById("radius").value;
+var calArea=calculate(value);
+document.getElementById("final").innerHTML=calArea;
+
+}
+
+
+
+function calculate(){
+
+  var value=document.getElementById("radius").value;
+  var calArea=(3.14*value*value);
+  document.getElementById("final").innerHTML=calArea;
+
+
+}
+
+
+</script>
+  </body>
+</html>

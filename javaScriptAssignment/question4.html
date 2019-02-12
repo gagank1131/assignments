@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+
+<p id="firstName"></p>
+<p id="lastName"></p>
+<p id="age"></p>
+
+<script type="text/javascript">
+
+var obj1={
+
+  firstName:"gagan",
+  lastName:"kushwaha",
+  age:25
+};
+
+//let obj2 =obj1;
+
+var obj2 = Object.assign({},obj1);
+
+/*for(x in obj1){
+obj2.firstName=obj1.firstName;
+obj2.lastName=obj1.lastName;
+obj2.age=obj2.age;
+
+
+}
+*/
+
+
+
+
+document.getElementById("firstName").innerHTML=obj1.firstName;
+document.getElementById("lastName").innerHTML=obj1.lastName;
+document.getElementById("age").innerHTML=obj1.age;
+
+console.log(obj2);
+
+obj1.firstName="arpit";
+
+console.log(obj2);
+</script>
+
+
+
+
+
+  </body>
+</html>

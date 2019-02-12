@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+
+
+<p id="result"></p>
+
+<script type="text/javascript">
+
+
+var object1=[
+{ name:"gagan kushwaha",
+age:25,
+salary:500,
+Dob:"11-02-1994"
+},
+{
+
+  name:"lohit ahuja",
+  age:23,
+  salary:3000,
+  Dob:"13-02-1995"
+},
+
+{
+
+  name:"prateek ",
+  age:19,
+  salary:700,
+  Dob:"13-06-1995"
+},
+
+{
+
+  name:"arpit gupta",
+  age:37,
+  salary:300,
+  Dob:"12-12-1995"
+}
+
+];
+
+
+console.log(object1);
+
+ object1.forEach(function(x){
+
+if(x.age>20 && x.salary<1000){
+
+x.salary=(x.salary)*5;
+
+console.log(x);
+
+}
+
+
+ });
+console.log(object1);
+
+// document.getElementById("result").innerHTML=result;
+
+
+
+</script>
+  </body>
+</html>

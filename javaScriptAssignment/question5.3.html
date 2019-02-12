@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+
+
+<p id="result"></p>
+
+<script type="text/javascript">
+
+
+var object1=[
+{ name:"gagan kushwaha",
+age:25,
+salary:5000,
+Dob:"11-02-1994"
+},
+{
+
+  name:"lohit ahuja",
+  age:23,
+  salary:3000,
+  Dob:"13-02-1995"
+},
+
+{
+
+  name:"prateek ",
+  age:27,
+  salary:7000,
+  Dob:"13-06-1995"
+},
+
+{
+
+  name:"arpit gupta",
+  age:37,
+  salary:3000,
+  Dob:"12-12-1995"
+}
+
+];
+
+var ageGroup1=new Array();
+
+var ageGroup2=new Array();
+
+console.log(object1);
+
+ object1.forEach(function(x){
+
+if(x.age>=20 && x.age<=25){
+ageGroup1.push(x.name);
+console.log(x);
+
+}
+else if (x.age>25 && x.age<=35) {
+  ageGroup2.push(x.name);
+  console.log(x);
+}
+
+ });
+
+ console.log("age group 1 members:"+ageGroup1);
+ console.log("age group 2 members:"+ageGroup2);
+
+const Results =groupBy(object1,obj => obj.age);
+console.log(Results.get(37));
+// document.getElementById("result").innerHTML=result;
+
+
+
+</script>
+  </body>
+</html>
