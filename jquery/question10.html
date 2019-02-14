@@ -4,22 +4,67 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <style>
+        .list{
+border: 2px solid black;
+border-radius: 3px;
+width: 15%;
+            background-color: bisque;
+            
+        }
+    li{
+
+display: none;
+
+    }
+    a{
+
+        font-size: xx-large;
+        color: brown;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    }
+    
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+   
+$("a").hover(function(){
+
+
+$("li").slideToggle("100");
+
+
+
+});
+
+
+
+});
+
+</script>
+    
 </head>
 <body>
-    
+   <div class="list"> 
 <ul>
+    <a href="" id="menu">Dropdown</a>
     <li>
-gagan
+item1
     </li>
     <li>
-lohit
+item2
     </li>
-prateek
+<li>
+    item3
+</li>
     <li>
-arpit
+item4
     </li>
 </ul>
+</div>
 
+        
 
 </body>
 </html>

@@ -1,0 +1,53 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<script>
+$(document).ready(function(){
+
+
+$("#myDiv").click(function(){
+
+alert("div");
+
+
+});
+
+$("#mybt").click(function(e){
+e.stopPropagation();
+alert("button");
+
+
+});
+
+
+
+});
+</script>
+
+</head>
+<body>
+
+    <div id="myDiv">
+<p>
+    This is a paragraph!!
+</p>
+<br>
+
+<button id="mybt">submit</button>
+
+
+
+    </div>
+
+
+
+
+
+</body>
+</html>
