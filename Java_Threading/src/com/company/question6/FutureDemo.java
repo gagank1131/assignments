@@ -28,9 +28,6 @@ public class FutureDemo {
              System.out.println("Task is cancelled");
          }
          
-         
-         
-         
         
     }
 }
