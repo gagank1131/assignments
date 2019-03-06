@@ -1,0 +1,87 @@
+QUESTION 1 :
+
+For creating a executable jar file with desired class following code should be added to our build.gradle
+
+jar {
+      manifest {
+          attributes(
+                  'Main-Class': '<path>'
+          )
+      }
+ }
+
+This is done using the JAR TASK from java plugin
+
+--------------------------------------------------------------------------------------------------------------------------------
+
+QUESTION 2:
+
+To add different sources(Directories) we use
+
+sourceSets {
+    main {
+        java {
+            srcDirs = ['src/main/java', 'src/main/java2']
+        }
+
+    }
+}
+
+--------------------------------------------------------------------------------------------------------------------------------
+
+QUESTION 3:
+
+To include resource directory to out jar, that is build in build/libs/ we use following in our
+build.gradle and to exclude a particular file
+
+sourceSets {
+    main {
+        resources{
+            srcDirs = ['src/main/resources']
+            exclude 'file.txt'
+        }
+    }
+}
+
+---------------------------------------------------------------------------------------------------------------------------------
+
+QUESTION 4:
+
+An uber-JAR—also known as a fat JAR or JAR with dependencies—is a JAR file that contains not only a Java program,
+ but embeds its dependencies as well. This means that the JAR functions as an "all-in-one" distribution of the software,
+ without needing any other Java code.
+
+ For this i've created a custom task for creating a far jar where my dependencies have been embeded in my all-in-one-jar.jar
+
+dependencies {
+
+    compile group: 'org.apache.commons', name: 'commons-lang3', version: '3.6'
+}
+
+task customFatJar(type: Jar) {
+    manifest {
+        attributes 'Main-Class': 'Application'
+    }
+    baseName = 'all-in-one-jar'
+    from { configurations.compile.collect { it.isDirectory() ? it : zipTree(it) } }
+    with jar
+}
+
+ref- https://www.baeldung.com/gradle-fat-jar
+
+-------------------------------------------------------------------------------------------------------------------------------
+
+QUESTION 5:
+
+repositories {
+    mavenCentral()
+}
+
+
+-------------------------------------------------------------------------------------------------------------------------------
+
+QUESTION 6:
+
+For this i've created a seperate myTasks.gradle and created a task without do first so they'll be running as soon as i build.
+
+apply from:'myTasks.gradle'

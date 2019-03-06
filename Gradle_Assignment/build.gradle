@@ -1,0 +1,54 @@
+apply plugin: 'java'
+
+apply from:'myTasks.gradle'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+
+    compile group: 'org.apache.commons', name: 'commons-lang3', version: '3.6'
+}
+
+sourceSets {
+    source {
+        main {
+            java {
+                srcDirs = ["source/main/java", "source/main/java2"]
+            }
+        }
+    }
+}
+
+
+
+sourceSets {
+    source {
+        main {
+            resources {
+                srcDirs = ['source/main/resources']
+                exclude 'file1.txt'
+            }
+        }
+    }
+}
+
+
+jar {
+    manifest {
+
+        attributes 'Main-class': 'Application2'
+
+    }
+
+}
+
+task customFatJar(type: Jar) {
+    manifest {
+        attributes 'Main-Class': 'Application'
+    }
+    baseName = 'all-in-one-jar'
+    from { configurations.compile.collect { it.isDirectory() ? it : zipTree(it) } }
+    with jar
+}

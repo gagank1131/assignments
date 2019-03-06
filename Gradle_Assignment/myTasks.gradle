@@ -1,0 +1,3 @@
+task myCustomTask{
+    println"This is the task from myTasks.gradle"
+}
