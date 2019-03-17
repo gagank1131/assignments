@@ -1,5 +1,4 @@
-package com.ttn.assignment.Question12;
-
+package com.ttn.assignment.Question12d_e;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
@@ -10,20 +9,18 @@ import org.springframework.transaction.annotation.Transactional;
 import java.util.Date;
 
 @Repository
-public class UserDao7 {
+public class UserDao7d {
     
     @Autowired
     JdbcTemplate jdbcTemplate;
     
-    @Transactional(propagation = Propagation.REQUIRED)
-    public void insert() {
-        String sql = "INSERT INTO user (UserName,password,name,age,dob)VALUES(?,?,?,?,?)";
-        jdbcTemplate.update(sql, new Object[]{
-                "UserDao7", "abc12", "abc12", 12, new Date()
+    @Transactional(propagation = Propagation.MANDATORY)
+    public void insert(){
+        String sql = "INSERT INTO user(UserName,password,name,age,dob)VALUES(?,?,?,?,?)";
+        jdbcTemplate.update(sql,new Object[]{
+                "arpit",12,"arpit",25,new Date()
         });
         
-        
-            throw new RuntimeException();
-       
+        throw new RuntimeException();
     }
 }
