@@ -1,0 +1,17 @@
+plugins {
+    id 'java'
+}
+
+group 'com.ttn.hibernate_Assignment'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile('org.hibernate:hibernate-core:5.2.6.Final')
+    compile ('mysql:mysql-connector-java:5.1.6')
+}
