@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="head :: head(FirstJs='First.js',FirstCss='First.css',title='Hello')"></head>
+<!--<head>-->
+<!--<meta charset="UTF-8">-->
+<!--<title>Hello Html Page</title>-->
+
+
+<!--<script-->
+<!--src="http://code.jquery.com/jquery-3.3.1.min.js"-->
+<!--integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="-->
+<!--crossorigin="anonymous"></script>-->
+<!--<script th:src="@{/First.js}"></script>-->
+<!--<link th:href="@{/First.css}" rel="stylesheet"/>-->
+<!--</head>-->
+<body>
+
+<div class="loading"></div>
+
+<header th:include="header :: header(${employeeObject})"></header>
+<br>
+<br>
+<br>
+
+<p>Hello <span th:text="${name}"></span></p>
+<button type="button" id="alertBtn">Click For Alert</button>
+
+<br>
+<br>
+<br>
+
+<form th:action="@{/th/save-employee}" th:object="${employee}" method="post">
+    Enter Name:
+    <input th:type="text" th:name="name" th:field="*{name}">
+    Enter Email:
+    <input th:type="email" th:name="email" th:field="*{email}">
+    Enter Age:
+    <input th:type="number" th:name="age" th:field="*{age}">
+    <button th:type="sumbit">Submit</button>
+</form>
+
+<br>
+<br>
+<br>
+<br>
+
+<table>
+    <thead>
+    <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Age</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="result,iterStat:${employeeTable}">
+        <td th:text="${result.name}"></td>
+        <td th:text="${result.email}"></td>
+        <td th:text="${result.age}"></td>
+    </tr>
+    </tbody>
+</table>
+
+<br>
+<button class="button start" >Start loader</button>
+<button class="button stop" >Stop loader</button>
+<br>
+<br>
+
+<div th:with="var=${isAdmin}">
+
+    <span th:if="${var}">Hello From Admin</span>
+
+    <span th:unless="${var}">Hello From User</span>
+
+</div>
+
+
+<br>
+<br>
+<p>Current Time</p>
+<span id="currentTime"></span>
+<br>
+<br>
+
+<label>Competency: </label>
+<select>
+    <option th:value="None">Select One</option>
+    <option th:each="competency : ${T(com.springboot.demo.thymeleaf.Competency).values()}"
+            th:value="${competency.getValue()}" th:text="${competency.getValue()}"></option>
+</select>
+
+<br>
+<br>
+<br>
+<footer th:include="footer :: copy"></footer>
+
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <head th:fragment="head(FirstJs,FirstCss,title)">
+        <meta charset="UTF-8">
+
+        <script
+                src="http://code.jquery.com/jquery-3.3.1.min.js"
+                integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+                crossorigin="anonymous"></script>
+        <title th:text="${title}"></title>
+        <script th:src="@{'/'+${FirstJs}}"></script>
+        <link th:href="@{'/'+${FirstCss}}" rel="stylesheet"/>
+    </head>
+</head>
+<body>
+
+</body>
+</html>
